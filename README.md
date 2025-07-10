@@ -4,8 +4,11 @@ This script swaps two integers _without_ introducing new variables. It makes use
 
 ## Run script
 
-Using >= python 3.3
-`python swap.py`
+Using >= python 3.3:
+
+```
+python swap.py
+```
 
 You'll be prompted to enter two numbers:
 
