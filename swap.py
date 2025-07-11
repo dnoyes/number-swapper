@@ -1,14 +1,13 @@
 import unittest
 
 
-# Given two integers, swap them _without_ introducing any new variables
+# Yes, this is dead simple. But I'm wrapping it in a function so that it can be unit tested.
 #   -- note: doesn't care if numbers are the same and doesn't do extensive
 #            error handling (but it certainly could)
 # @return the swapped numbers
-def swap_numbers(x, y) -> tuple:
-    x = f"{y}.{x}"
-    [x, y] = x.split('.')
-    return (int(x), int(y))
+def swap_numbers(x: str | int, y: str | int) -> tuple[int, int]:
+    x, y = int(y), int(x)
+    return x, y
 
 
 class TestSwap(unittest.TestCase):
@@ -34,19 +33,19 @@ class TestSwap(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    print("Swap two numbers! (you shall be amazed 😎)")
-    print("Type STOP to stop swapping\n")
+    print("Swap two numbers! (prepare to be amazed 😎)")
+    print("Type 'exit' to stop swapping\n")
 
     while True:
-        x: str = input("Enter first number: ")
-        if x.casefold() == "stop":
+        x: str | int = input("Enter first number: ")
+        if x.lower() == "exit":
             break
-        y: str = input("Enter second number: ")
-        if y.casefold() == "stop":
+        y: str | int = input("Enter second number: ")
+        if y.lower() == "exit":
             break
         print(f"\noriginal - x: {x}, y: {y}")
 
-        (x, y) = swap_numbers(int(x), int(y))
+        x, y = swap_numbers(x, y)
         print(f"swapped - x: {x}, y: {y}")
         print("💃 🕺\n")
 
