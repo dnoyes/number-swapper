@@ -14,5 +14,6 @@ jobs:
         with:
           python-version: "3.13"
 
-      - run: |
+      - name: Run tests
+        run: |
           python -m unittest tests/*
