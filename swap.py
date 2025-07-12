@@ -9,6 +9,7 @@ def swap_numbers(x: str | int, y: str | int) -> tuple[int, int]:
     :type x: str | int
     :param y: 2nd integer to swap
     :type y: str | int
+    :raises ValueError: when valid ints aren't passed in
     :return: swapped numbers
     :rtype: tuple[int, int]
 
