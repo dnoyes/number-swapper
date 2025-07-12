@@ -32,14 +32,12 @@ To stop swapping, type `exit` as one of the numbers.
 
 ## Run Tests
 
-After you're done swapping, you'll be prompted to run tests (default is Y(es))
-
 ```
-run tests? [Y/n]: y
+python -m unittest tests/*
 
-.....
+..
 ----------------------------------------------------------------------
-Ran 5 tests in 0.000s
+Ran 2 tests in 0.000s
 
 OK
 ```
