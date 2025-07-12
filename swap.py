@@ -3,7 +3,7 @@ import unittest
 
 def swap_numbers(x: str | int, y: str | int) -> tuple[int, int]:
     """
-    Swap two integers using tuploe unpacking (no introduction of new vars)
+    Swap two integers using tuple unpacking (no introduction of new vars)
 
     :param x: 1st integer to swap
     :type x: str | int
