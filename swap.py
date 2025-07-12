@@ -1,11 +1,18 @@
 import unittest
 
 
-# Yes, this is dead simple. But I'm wrapping it in a function so that it can be unit tested.
-#   -- note: doesn't care if numbers are the same and doesn't do extensive
-#            error handling (but it certainly could)
-# @return the swapped numbers
 def swap_numbers(x: str | int, y: str | int) -> tuple[int, int]:
+    """
+    Swap two integers using tuploe unpacking (no introduction of new vars)
+
+    :param x: 1st integer to swap
+    :type x: str | int
+    :param y: 2nd integer to swap
+    :type y: str | int
+    :return: swapped numbers
+    :rtype: tuple[int, int]
+
+    """
     x, y = int(y), int(x)
     return x, y
 
