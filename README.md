@@ -32,14 +32,30 @@ To stop swapping, type `exit` as one of the numbers.
 
 ## Run Tests
 
+First, set up a virtual env and install dependencies (`pytest`)
+
 ```
-python -m unittest tests/*
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
+Then run the tests
 
-OK
+```
+python -m pytest tests/*.py
+
+=================== test session starts ====================
+collected 2 items
+
+tests/test_swapnums.py ..                             [100%]
+==================== 2 passed in 0.00s =====================
+```
+
+Deactivate virtual env when done
+
+```
+deactivate
 ```
 
 ## Conclusion
